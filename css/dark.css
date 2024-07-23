@@ -1,0 +1,52 @@
+:root {
+    --text: #ffffff;
+    --background: #56565f;
+}
+
+body {
+    background-color: var(--background) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small,
+a {
+    color: var(--text) !important;
+    color: #1d1d23 !important;
+}
+
+.card {
+    background-color: #c7c7c7;
+    color: #ffffff;
+}
+
+.btn {
+    color: #ffffff;
+}
+
+table th {
+    background-color: #333;
+    color: #ffffff;
+}
+
+table td {
+    background-color: #808080;
+    color: #ffffff;
+}
+
+.form-control {
+    color: #333;
+    background-color: #cecece;
+    border: 1px solid #4e4e4e;
+}
+
+.list-group-item {
+    background-color: #b9b9b9;
+    color: #5a5a5a !important;
+    
+}
