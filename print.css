@@ -1,0 +1,111 @@
+/* Reset básico de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+/* Ajustes de impressão */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    color: #000;
+    background-color: #fff;
+}
+
+/* Ocultar elementos que não precisam aparecer na impressão */
+@media print {
+    /* Ocultar elementos de navegação, botões, etc. */
+    nav, footer, button, input, a {
+        display: none;
+    }
+
+    /* Definir o layout da página */
+    body {
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    /* Reset para a classe card do Bootstrap */
+    .card {
+        border: none;
+        box-shadow: none; /* Remover qualquer sombra */
+        margin-bottom: 1rem;
+    }
+
+    .card-header, .card-footer {
+        display: none; /* Ocultar header e footer do card */
+    }
+
+    .card-body {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Configuração de tabelas para impressão */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1rem;
+    }
+
+    th, td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: left;
+        border: none;
+    }
+
+    th {
+        background-color: #f0f0f0;
+    }
+
+    /* Garantir que a tabela ocupe a largura total */
+    thead {
+        display: table-header-group;
+    }
+
+    tr, th, td {
+        page-break-inside: avoid; /* Evitar que quebre linhas no meio da página */
+    }
+
+    /* Estilo de impressão para cabeçalhos */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+
+    /* Ajuste de fontes menores para a impressão */
+    body, table {
+        font-size: 12px;
+    }
+
+    /* Esconder elementos visíveis apenas na tela */
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* Garantir que as imagens e tabelas tenham a largura total */
+img {
+    max-width: 100%;
+    height: auto;
+    page-break-inside: avoid; /* Evitar quebra de página no meio de imagens */
+}
+
+/* Estilos gerais para a tela */
+.container {
+    max-width: 1140px; /* ou o valor padrão do Bootstrap */
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Para impressão, substituir .container por .container-fluid */
+@media print {
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+}
